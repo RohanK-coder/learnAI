@@ -158,7 +158,7 @@ export default function DashboardPage() {
 
                   {/* AI button */}
                   <button
-                    onClick={e => { e.stopPropagation(); navigate(`/courses/${course.id}/ai`); }}
+                    onClick={e => { e.stopPropagation(); navigate(`/messages`); }}
                     style={{
                       flexShrink: 0, padding: "6px 12px", fontSize: 12,
                       fontWeight: 500, background: "#534AB7", color: "#fff",

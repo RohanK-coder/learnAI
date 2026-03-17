@@ -195,9 +195,16 @@ export default function CourseDetailPage() {
             </div>
 
             <button
-              onClick={() => navigate(`/courses/${courseId}/ai`, {
-                state: { slideTitle: current?.title, slideContent: current?.content }
-              })}
+              onClick={() =>
+  navigate("/messages", {
+    state: {
+      courseId: Number(courseId),
+      slideTitle: current?.title,
+      slideContent: current?.content,
+      prefill: `I need help with "${current?.title}".\n\n${current?.content || ""}`,
+    },
+  })
+}
               style={{
                 display: "flex", alignItems: "center", gap: 6,
                 padding: "8px 14px", fontSize: 13, fontWeight: 500,
